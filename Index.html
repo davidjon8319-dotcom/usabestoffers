@@ -1,601 +1,729 @@
+Here is your updated HTML code.
+
+The 6 original cards have been replaced with the first 6 offers from your provided chat log. The text descriptions, CTA button actions, and target links (`href`) have been precisely updated, and the images have been updated to matching Unsplash graphics.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>OkWow Rewards | Exclusive Cash & Gift Card Offers</title>
-    <!-- Google Fonts & simple CSS reset -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(145deg, #f6f9fc 0%, #eef2f5 100%);
-            color: #1A2C3E;
-            line-height: 1.4;
-        }
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no,
+viewport-fit=cover">
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 1.5rem 1.8rem 3rem;
-        }
+<title>Premium Rewards Hub</title>
 
-        /* header & logo */
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(0,0,0,0.05);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .logo-icon {
-            background: linear-gradient(135deg, #FFB347, #FF6B3D);
-            width: 54px;
-            height: 54px;
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 18px rgba(255,107,61,0.25);
-        }
+<style>
 
-        .logo-icon span {
-            font-size: 32px;
-            font-weight: 800;
-            color: white;
-            letter-spacing: -1px;
-        }
+:root{
 
-        .logo-text h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(125deg, #1F2F3E, #2B4F6E);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
-        }
+--bg1:#32004f;
+--bg2:#140020;
+--bg3:#050008;
 
-        .logo-text p {
-            font-size: 0.85rem;
-            color: #3A6B8C;
-            font-weight: 500;
-        }
+--card:#12121b;
+--card2:#171720;
 
-        .trust-badge {
-            background: white;
-            padding: 8px 18px;
-            border-radius: 60px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            color: #2c7a4d;
-        }
+--white:#fff;
+--muted:#a5a5a5;
 
-        /* headline */
-        .hero {
-            text-align: center;
-            margin: 1.8rem 0 2rem;
-        }
+--green1:#18cf60;
+--green2:#0b7f35;
 
-        .hero h2 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            background: linear-gradient(125deg, #1F2F3E, #E67E22);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 0.75rem;
-        }
+--blue1:#4693ff;
+--blue2:#1551b5;
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #2c3e4e;
-            max-width: 650px;
-            margin: 0 auto;
-        }
+--red1:#ff4343;
+--red2:#b41212;
 
-        /* offers grid */
-        .offers-section {
-            margin: 2.5rem 0 2rem;
-        }
+--gold1:#d5a645;
+--gold2:#7d5512;
 
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+}
 
-        .section-title span {
-            background: #FFEAD2;
-            padding: 4px 12px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #c95a0f;
-        }
+/* ===== RESET ===== */
 
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.6rem;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .offer-card {
-            background: white;
-            border-radius: 28px;
-            padding: 1.2rem 1.2rem 1.2rem 1.5rem;
-            transition: all 0.2s ease;
-            box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0,0,0,0.03);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+html{
+scroll-behavior:smooth;
+-webkit-text-size-adjust:100%;
+}
 
-        .offer-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.15);
-            border-color: #FFD9B5;
-        }
+body{
 
-        .offer-info h3 {
-            font-size: 1.35rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-            color: #1e2f3c;
-        }
+font-family:'Poppins',sans-serif;
 
-        .offer-brand {
-            display: inline-block;
-            background: #F2EAE1;
-            padding: 4px 12px;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #B45F2B;
-            letter-spacing: 0.3px;
-        }
+background:
+radial-gradient(circle at top,
+var(--bg1) 0%,
+var(--bg2) 40%,
+var(--bg3) 100%);
 
-        .offer-value {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #E67E22;
-            margin-top: 8px;
-        }
+color:var(--white);
 
-        .claim-btn {
-            background: #1F2F3E;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+min-height:100vh;
 
-        .claim-btn:hover {
-            background: #E67E22;
-            transform: scale(0.97);
-        }
+overflow-x:hidden;
 
-        /* reviews section - always changing */
-        .reviews-section {
-            background: #ffffffcc;
-            backdrop-filter: blur(2px);
-            border-radius: 44px;
-            padding: 1.8rem 2rem;
-            margin: 2.8rem 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-        }
+padding:
+max(18px, env(safe-area-inset-top))
+14px
+max(22px, env(safe-area-inset-bottom));
 
-        .reviews-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
+-webkit-font-smoothing:antialiased;
+text-rendering:optimizeLegibility;
 
-        .reviews-header h3 {
-            font-size: 1.7rem;
-            font-weight: 700;
-        }
+}
 
-        .live-badge {
-            background: #E67E2210;
-            color: #E67E22;
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 5px 12px;
-            border-radius: 40px;
-            border: 1px solid #E67E2240;
-        }
+/* ===== CONTAINER ===== */
 
-        .reviews-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            max-height: 320px;
-            overflow-y: auto;
-            padding-right: 8px;
-        }
+.container{
+width:100%;
+max-width:1150px;
+margin:auto;
+}
 
-        .review-card {
-            background: #FEFAF5;
-            border-radius: 24px;
-            padding: 1rem 1.2rem;
-            border-left: 5px solid #FFB347;
-            transition: 0.15s;
-        }
+/* ===== HEADER ===== */
 
-        .review-top {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
+.header{
+text-align:center;
+margin-bottom:34px;
+}
 
-        .reviewer-avatar {
-            width: 36px;
-            height: 36px;
-            background: #E9DBCF;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #A5551A;
-        }
+.header h1{
 
-        .reviewer-name {
-            font-weight: 700;
-        }
+font-size:clamp(2rem,9vw,5rem);
 
-        .review-stars {
-            color: #F4B942;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-        }
+font-weight:800;
 
-        .review-text {
-            color: #2d3e4b;
-            font-size: 0.9rem;
-            margin: 8px 0 4px;
-            line-height: 1.4;
-        }
+line-height:1.05;
 
-        .review-time {
-            font-size: 0.7rem;
-            color: #8F9EAD;
-        }
+background:
+linear-gradient(to bottom,#fff,#bbbbbb);
 
-        /* footer */
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #ddd9d2;
-            font-size: 0.75rem;
-            color: #6f8ea0;
-        }
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 
-        @media (max-width: 700px) {
-            .container {
-                padding: 1rem;
-            }
-            .hero h2 {
-                font-size: 1.6rem;
-            }
-            .offer-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+text-shadow:
+0 0 25px rgba(255,255,255,.18);
+
+padding-inline:5px;
+
+}
+
+.ribbon{
+
+display:inline-flex;
+
+justify-content:center;
+align-items:center;
+
+margin-top:16px;
+
+padding:11px 18px;
+
+border-radius:12px;
+
+background:
+linear-gradient(to bottom,#666,#333);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+font-size:.74rem;
+
+font-weight:600;
+
+letter-spacing:.3px;
+
+line-height:1.4;
+
+text-align:center;
+
+max-width:100%;
+
+box-shadow:
+0 8px 18px rgba(0,0,0,.45);
+
+}
+
+/* ===== GRID ===== */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,minmax(0,1fr));
+
+gap:22px;
+
+}
+
+/* ===== CARD ===== */
+
+.card{
+
+position:relative;
+
+border-radius:24px;
+
+overflow:hidden;
+
+background:var(--card);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 18px 35px rgba(0,0,0,.55);
+
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+
+min-width:0;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+0 28px 50px rgba(0,0,0,.7),
+0 0 18px rgba(162,89,255,.18);
+
+}
+
+/* ===== IMAGE ===== */
+
+.top{
+
+position:relative;
+
+width:100%;
+
+aspect-ratio:16/10;
+
+overflow:hidden;
+
+background:#111;
+
+}
+
+.top img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:transform .4s ease;
+
+}
+
+.card:hover .top img{
+transform:scale(1.08);
+}
+
+/* ===== BADGES ===== */
+
+.badge{
+
+position:absolute;
+
+top:12px;
+
+padding:7px 12px;
+
+border-radius:10px;
+
+font-size:.63rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+z-index:20;
+
+box-shadow:
+0 4px 12px rgba(0,0,0,.35);
+
+backdrop-filter:blur(8px);
+
+max-width:calc(100% - 24px);
+
+white-space:nowrap;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+}
+
+.hot{
+
+right:12px;
+
+background:
+linear-gradient(to right,#ff416c,#ff4b2b);
+
+}
+
+.verify{
+
+left:12px;
+
+background:
+linear-gradient(to right,#00d68f,#76ffd4);
+
+color:#04241b;
+
+}
+
+/* ===== CONTENT ===== */
+
+.content{
+
+padding:18px;
+
+background:
+linear-gradient(to bottom,
+var(--card2),
+#0b0b13);
+
+}
+
+.content h2{
+
+font-size:1rem;
+
+font-weight:700;
+
+line-height:1.45;
+
+text-align:center;
+
+margin-bottom:18px;
+
+min-height:56px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+word-break:break-word;
+
+}
+
+/* ===== BUTTON ===== */
+
+.btn{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+width:100%;
+
+min-height:52px;
+
+padding:14px 16px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:.82rem;
+
+font-weight:800;
+
+letter-spacing:.5px;
+
+transition:
+transform .25s ease,
+filter .25s ease;
+
+user-select:none;
+
+-webkit-tap-highlight-color:transparent;
+
+}
+
+.btn:hover{
+
+transform:scale(1.02);
+
+filter:brightness(1.08);
+
+}
+
+.btn:active{
+transform:scale(.98);
+}
+
+/* ===== COLORS ===== */
+
+.green{
+background:
+linear-gradient(to bottom,
+var(--green1),
+var(--green2));
+}
+
+.blue{
+background:
+linear-gradient(to bottom,
+var(--blue1),
+var(--blue2));
+}
+
+.red{
+background:
+linear-gradient(to bottom,
+var(--red1),
+var(--red2));
+}
+
+.gold{
+background:
+linear-gradient(to bottom,
+var(--gold1),
+var(--gold2));
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+margin-top:50px;
+
+text-align:center;
+
+color:var(--muted);
+
+font-size:.78rem;
+
+line-height:1.6;
+
+padding-inline:10px;
+
+}
+
+/* ===== TABLET ===== */
+
+@media(max-width:1024px){
+
+.grid{
+grid-template-columns:
+repeat(2,minmax(0,1fr));
+}
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+body{
+padding:
+max(14px, env(safe-area-inset-top))
+13px
+max(18px, env(safe-area-inset-bottom));
+}
+
+.header{
+margin-bottom:28px;
+}
+
+.header h1{
+font-size:clamp(2rem,11vw,3rem);
+}
+
+.ribbon{
+width:100%;
+font-size:.72rem;
+padding:11px 14px;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.card{
+border-radius:22px;
+}
+
+.top{
+aspect-ratio:16/9;
+}
+
+.content{
+padding:16px;
+}
+
+.content h2{
+font-size:.97rem;
+margin-bottom:16px;
+min-height:auto;
+}
+
+.btn{
+font-size:.8rem;
+min-height:52px;
+}
+
+}
+
+/* ===== SMALL IPHONE ===== */
+
+@media(max-width:390px){
+
+.header h1{
+font-size:1.85rem;
+}
+
+.badge{
+font-size:.56rem;
+padding:6px 10px;
+}
+
+.content{
+padding:15px;
+}
+
+.content h2{
+font-size:.92rem;
+}
+
+.btn{
+font-size:.76rem;
+letter-spacing:.3px;
+}
+
+footer{
+font-size:.72rem;
+}
+
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+scroll-behavior:auto;
+}
+
+.card,
+.btn,
+.top img{
+transition:none;
+}
+
+}
+
+</style>
 </head>
+
 <body>
+
 <div class="container">
-    <!-- Header with real logo (OkWow & brand) -->
-    <div class="header">
-        <div class="logo-area">
-            <div class="logo-icon">
-                <span>OW</span>
-            </div>
-            <div class="logo-text">
-                <h1>OkWow Rewards</h1>
-                <p>Instant Prizes · Trusted by 100k+ users</p>
-            </div>
-        </div>
-        <div class="trust-badge">
-            ⚡ Verified Offers · Real Redemptions
-        </div>
-    </div>
 
-    <!-- Hero -->
-    <div class="hero">
-        <h2>Win Big Every Day 🎁</h2>
-        <p>Exclusive CashApp, Amazon, Walmart, and luxury gift cards — claim your reward now.</p>
-    </div>
+<div class="header">
 
-    <!-- OFFERS SECTION (all real links & logos with provider) -->
-    <div class="offers-section">
-        <div class="section-title">
-            🔥 Today's Hot Offers <span>Limited Spots</span>
-        </div>
-        <div class="offers-grid" id="offersContainer">
-            <!-- JS will populate offers from the data list, preserving all links and names -->
-        </div>
-    </div>
+<h1>Unlock Your Rewards</h1>
 
-    <!-- LIVE CHANGING REVIEWS section (always dynamic + real feedback) -->
-    <div class="reviews-section">
-        <div class="reviews-header">
-            <h3>⭐ Real Member Reviews</h3>
-            <div class="live-badge">🔄 LIVE · Updates every 30-45 sec</div>
-        </div>
-        <div class="reviews-grid" id="reviewsList">
-            <!-- dynamic reviews injected via JS -->
-            <div class="review-card">Loading latest testimonials...</div>
-        </div>
-        <p style="font-size: 0.7rem; margin-top: 1rem; text-align: right;">✔ Verified from real winners — new reviews appear automatically</p>
-    </div>
-
-    <div class="footer">
-        © 2025 OkWow Rewards Platform — Official partner promotions. Offers are limited, subject to terms.
-    </div>
+<div class="ribbon">
+Verified Offers • Fast Access • Big Prizes
 </div>
 
-<script>
-    // --------------------------------------------------------------
-    // 1. OFFERS DATA (exactly as provided by user, with their real urls & descriptions)
-    // --------------------------------------------------------------
-    const offersData = [
-        { title: "OkWow - CashApp", value: "$850", brand: "CashApp", link: "https://www.af9m8trk.com/J6H116EG/5JY122KX/?s1=Divet" },
-        { title: "RewardZinga - CashApp", value: "$1,000", brand: "CashApp", link: "https://www.af9m8trk.com/J6H116EG/9PC123FX/?s1=Divet" },
-        { title: "My American Prizes", value: "$1,000 Amazon", brand: "Amazon", link: "https://www.af9m8trk.com/J6H116EG/TJ2123FW/?s1=Divet" },
-        { title: "OkWow - Walmart", value: "$1,000", brand: "Walmart", link: "https://www.af9m8trk.com/J6H116EG/T6M12294/?s1=Divet" },
-        { title: "OkWow - Family Dollar", value: "$500", brand: "Family Dollar", link: "https://www.af9m8trk.com/J6H116EG/TTR12295/?s1=Divet" },
-        { title: "OkWow - American Eagle", value: "$100", brand: "American Eagle", link: "https://www.af9m8trk.com/J6H116EG/MJP12296/?s1=Divet" },
-        { title: "OkWow - Netflix", value: "$100", brand: "Netflix", link: "https://www.af9m8trk.com/J6H116EG/KDQ122LY/?s1=Divet" },
-        { title: "OkWow - Royal Cruise", value: "$100", brand: "Cruise Voucher", link: "https://www.af9m8trk.com/J6H116EG/R98122L2/?s1=Divet" },
-        { title: "OkWow - Costco", value: "$100", brand: "Costco", link: "https://www.af9m8trk.com/J6H116EG/3A9122KV/?s1=Divet" },
-        { title: "OkWow - Aldi", value: "$100", brand: "Aldi", link: "https://www.af9m8trk.com/J6H116EG/GDZ122L3/?s1=Divet" },
-        { title: "UpLevelRewards", value: "$1,000 Cash Deposit", brand: "Cash Deposit", link: "https://www.af9m8trk.com/J6H116EG/4K1123XK/?s2=Divet" },
-        { title: "OkWow - CashApp", value: "$650", brand: "CashApp", link: "https://www.af9m8trk.com/J6H116EG/3AF122KW/?s2=Divet" },
-        { title: "UpLevelRewards - Target", value: "$750", brand: "Target", link: "https://www.af9m8trk.com/J6H116EG/HMG123XJ/?s1=Divet" }
-    ];
+</div>
 
-    // render offers grid
-    function renderOffers() {
-        const container = document.getElementById('offersContainer');
-        if(!container) return;
-        container.innerHTML = '';
-        offersData.forEach(offer => {
-            const card = document.createElement('div');
-            card.className = 'offer-card';
-            card.innerHTML = `
-                <div class="offer-info">
-                    <h3>${escapeHtml(offer.title)}</h3>
-                    <span class="offer-brand">${escapeHtml(offer.brand)}</span>
-                    <div class="offer-value">${escapeHtml(offer.value)}</div>
-                </div>
-                <a href="${escapeHtml(offer.link)}" target="_blank" rel="noopener noreferrer" class="claim-btn">Claim Now →</a>
-            `;
-            container.appendChild(card);
-        });
-    }
+<div class="grid">
 
-    // simple escape
-    function escapeHtml(str) { return String(str).replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+<div class="card">
 
-    // ------------------------------------------------
-    // 2. REAL REVIEWS - ALWAYS CHANGING (dynamic rotating + random additions)
-    //    Simulates real user feedback that changes every ~40 seconds 
-    //    and also random intervals to mimic live feed.
-    // ------------------------------------------------
-    
-    // Base review pool (realistic testimonials about the offers / OkWow)
-    const reviewPool = [
-        { name: "Marcus L.", location: "Austin, TX", text: "I claimed the $850 CashApp offer last week and the money hit my account in under 2 hours!! Insane 🔥", stars: 5, avatar: "ML" },
-        { name: "Tasha R.", location: "Miami, FL", text: "OkWow is legit, got my $1000 Walmart card, used it for groceries. Super happy!", stars: 5, avatar: "TR" },
-        { name: "James K.", location: "Chicago, IL", text: "Was skeptical but the $500 Family Dollar prize came through. My wife is thrilled. Thanks OkWow!", stars: 5, avatar: "JK" },
-        { name: "Sophia M.", location: "Denver, CO", text: "RewardZinga $1000 cash deposit was easy, received after survey. Real deal!", stars: 4, avatar: "SM" },
-        { name: "Derek W.", location: "Seattle, WA", text: "I won the Amazon $1000 prize! Bought a new laptop. The link worked perfectly.", stars: 5, avatar: "DW" },
-        { name: "Lindsay P.", location: "NYC, NY", text: "Netflix $100 covered my subscription for months, super quick redemption!", stars: 4, avatar: "LP" },
-        { name: "Carlos G.", location: "LA, CA", text: "Got the UpLevelRewards $750 Target card — bought gifts for family. Trustworthy site!", stars: 5, avatar: "CG" },
-        { name: "Emma S.", location: "Orlando, FL", text: "American Eagle $100 credit made my day! Received code within minutes after claiming.", stars: 5, avatar: "ES" },
-        { name: "Nathan B.", location: "Dallas, TX", text: "I've claimed three OkWow offers already. Costco & Aldi vouchers legit. 10/10", stars: 5, avatar: "NB" },
-        { name: "Rachel Y.", location: "Boston, MA", text: "Royal Cruise $100 discount saved me a bunch. excited for vacation", stars: 4, avatar: "RY" },
-        { name: "Omar H.", location: "Detroit, MI", text: "Just received CashApp $650 from OkWow! My friend also won. Real reviews here!", stars: 5, avatar: "OH" },
-        { name: "Kristen J.", location: "Portland, OR", text: "I saw negative comments on other sites but OkWow actually paid my $1000 cash deposit. Amazing!", stars: 5, avatar: "KJ" }
-    ];
-    
-    // additional messages to simulate dynamic content rotation
-    const extraMessages = [
-        "Super fast payout, recommended ✅", "Legit rewards program, already claimed 2 offers!",
-        "Customer support answered quickly, got my prize.", "Took 10 min to complete, Walmart eGift arrived!",
-        "Better than other GPT sites, 100% real.", "Just cashed out $850 to CashApp, 3 hours later it was there!",
-        "New winner here! Love the OkWow dashboard.", "My American Prizes delivered $1,000 Amazon card 💪"
-    ];
-    
-    // build extended reviews list combining full pool & extra messages (for variety)
-    let dynamicReviews = [];
-    
-    function initReviewsArray() {
-        dynamicReviews = [];
-        // initial fill from reviewPool
-        reviewPool.forEach(r => {
-            dynamicReviews.push({ ...r });
-        });
-        // add some extras
-        for(let i=0; i<6; i++) {
-            const randMsg = extraMessages[Math.floor(Math.random() * extraMessages.length)];
-            const randomNames = ["Tyrone B.", "Megan F.", "Alexis C.", "Vincent O.", "Hailey Z.", "Patrick L."];
-            dynamicReviews.push({
-                name: randomNames[i % randomNames.length],
-                location: ["Atlanta, GA","Phoenix, AZ","Philadelphia, PA","San Diego, CA","Nashville, TN"][i%5],
-                text: randMsg,
-                stars: 4 + Math.floor(Math.random() * 2),
-                avatar: (randomNames[i].charAt(0) + (i+5).toString()).substring(0,2).toUpperCase()
-            });
-        }
-        // shuffle current array once
-        shuffleArray(dynamicReviews);
-    }
-    
-    function shuffleArray(arr) {
-        for (let i = arr.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-    }
-    
-    // Function to update displayed reviews dynamically (change content order, random new entries, timestamps)
-    let reviewsListElement = null;
-    
-    function renderReviews() {
-        if(!reviewsListElement) return;
-        // take first 5 reviews from dynamicReviews array (or whole if less)
-        const displayReviews = dynamicReviews.slice(0, 6);
-        reviewsListElement.innerHTML = '';
-        for(let rev of displayReviews) {
-            const starsFull = '★'.repeat(rev.stars) + '☆'.repeat(5-rev.stars);
-            // random time ago simulation
-            const minutesAgo = Math.floor(Math.random() * 50) + 2;
-            const timeString = `${minutesAgo} minutes ago`;
-            const reviewDiv = document.createElement('div');
-            reviewDiv.className = 'review-card';
-            reviewDiv.innerHTML = `
-                <div class="review-top">
-                    <div class="reviewer-avatar">${escapeHtml(rev.avatar.substring(0,2))}</div>
-                    <div class="reviewer-name">${escapeHtml(rev.name)} <span style="font-weight:normal; color:#7f8c8d;">· ${escapeHtml(rev.location)}</span></div>
-                    <div class="review-stars">${starsFull}</div>
-                </div>
-                <div class="review-text">"${escapeHtml(rev.text)}"</div>
-                <div class="review-time">⭐ Verified winner · ${timeString}</div>
-            `;
-            reviewsListElement.appendChild(reviewDiv);
-        }
-    }
-    
-    // function that updates reviews: changes order, modifies some text, adds new occasional review
-    let changeCounter = 0;
-    function mutateReviews() {
-        // Simulate real "always changing": 
-        // 1. occasionally remove first review and push a new unique one
-        // 2. shuffle the array so order looks fresh
-        // 3. optionally alter some existing review text slight variation
-        
-        const newMessages = [
-            "Just received my $850 cashapp, took only 1 hour! 😍", 
-            "OkWow is the best! My $1,000 Walmart card arrived.",
-            "UpLevelRewards Target $750 legit, I'm a winner!", 
-            "I was doubtful but $650 CashApp showed up! Thanks OW!",
-            "Royal Cruise $100 — amazing value! love this platform",
-            "Netflix $100 gift card code worked instantly, will redeem again!",
-            "Family Dollar $500 used it for back to school supplies 💯",
-            "Costco $100 voucher is real, got my groceries yesterday!",
-            "Aldi $100 made my shopping free, thanks OkWow team!"
-        ];
-        
-        // every 2nd mutation, add a brand new review at the top (or bottom)
-        if (Math.random() > 0.4 || changeCounter % 3 === 0) {
-            const randomMsg = newMessages[Math.floor(Math.random() * newMessages.length)];
-            const fakeNames = ["Jasmine C.", "Darren M.", "Elaine W.", "Ricky V.", "Olivia P.", "Sam K."];
-            const newName = fakeNames[Math.floor(Math.random() * fakeNames.length)];
-            const locations = ["Houston, TX", "San Francisco, CA", "Brooklyn, NY", "Seattle, WA", "Columbus, OH"];
-            const newReview = {
-                name: newName,
-                location: locations[Math.floor(Math.random() * locations.length)],
-                text: randomMsg,
-                stars: 4 + Math.floor(Math.random() * 2),
-                avatar: newName.charAt(0) + (Math.floor(Math.random()*10)).toString()
-            };
-            // insert random position but keep fresh dynamic
-            if (Math.random() > 0.5) {
-                dynamicReviews.unshift(newReview);
-            } else {
-                dynamicReviews.push(newReview);
-            }
-            // keep max reviews 18-20 for performance
-            if (dynamicReviews.length > 20) dynamicReviews.pop();
-        }
-        
-        // also slightly modify one random review's text to feel even more "always changing"
-        if (dynamicReviews.length > 2 && Math.random() > 0.6) {
-            const idx = Math.floor(Math.random() * dynamicReviews.length);
-            const altTexts = ["Super smooth claim process! ✅", "Legit prizes, already recommended to friends!", "Instant payout, awesome!", "Another win today: just claimed $500 Family Dollar!"];
-            dynamicReviews[idx].text = altTexts[Math.floor(Math.random() * altTexts.length)];
-            dynamicReviews[idx].stars = 4 + Math.floor(Math.random() * 2);
-        }
-        
-        // shuffle the array again for new order (makes reviews sequence always different)
-        shuffleArray(dynamicReviews);
-        renderReviews();
-        changeCounter++;
-    }
-    
-    // start live refresh timer: every 35-45 seconds plus extra random updates (like realtime feed)
-    let intervalId;
-    function startLiveReviews() {
-        initReviewsArray();
-        renderReviews();
-        // main interval for significant changes
-        intervalId = setInterval(() => {
-            mutateReviews();
-        }, 38000); // changes every 38 seconds
-        
-        // also add a secondary quicker but smaller "rotational" feel: every 14s just shuffle order without new data? 
-        // To keep fresh we also just shuffle order & re-render without mutating too heavy 
-        setInterval(() => {
-            if (dynamicReviews.length) {
-                shuffleArray(dynamicReviews);
-                renderReviews();  // re-render same reviews but order changes -> always changing look
-            }
-        }, 16000);
-    }
-    
-    // Helper for initial load and safety
-    document.addEventListener('DOMContentLoaded', () => {
-        renderOffers();
-        reviewsListElement = document.getElementById('reviewsList');
-        if(reviewsListElement) startLiveReviews();
-    });
-    
-    // fallback if something else
-    window.addEventListener('load', () => {
-        if(!reviewsListElement) {
-            reviewsListElement = document.getElementById('reviewsList');
-            if(reviewsListElement && dynamicReviews.length === 0) startLiveReviews();
-        }
-    });
-</script>
+<div class="badge hot">
+🔥 Ending Soon
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop"
+alt="CashApp $850"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>OkWow - CashApp $850</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/5JY122KX/?s1=Divet" class="btn green" target="_blank">
+CLAIM REWARD
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="badge hot">
+Trending #1
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
+alt="CashApp $1,000"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>RewardZinga - CashApp $1,000</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/9PC123FX/?s1=Divet" class="btn green" target="_blank">
+GET STARTED
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="badge verify">
+✓ Verified
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=1200&auto=format&fit=crop"
+alt="Amazon $1,000"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>My American Prizes - Amazon $1,000</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/TJ2123FW/?s1=Divet" class="btn blue" target="_blank">
+GET AMAZON CARD
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="badge verify">
+✓ Verified
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=1200&auto=format&fit=crop"
+alt="Walmart $1,000"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>OkWow - Walmart $1,000</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/T6M12294/?s1=Divet" class="btn blue" target="_blank">
+CLAIM ECARD
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="badge hot">
+Top Rated
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop"
+alt="Family Dollar $500"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>OkWow - Family Dollar $500</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/TTR12295/?s1=Divet" class="btn gold" target="_blank">
+UNLOCK REWARD
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="badge hot">
+Popular
+</div>
+
+<div class="top">
+<img
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+alt="American Eagle $100"
+loading="lazy">
+</div>
+
+<div class="content">
+
+<h2>OkWow - American Eagle $100</h2>
+
+<a href="https://www.af9m8trk.com/J6H116EG/MJP12296/?s1=Divet" class="btn red" target="_blank">
+ENTER TO WIN
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 RewardsHub • Safe & Secure Offers
+</footer>
+
+</div>
+
 </body>
 </html>
+
+```
